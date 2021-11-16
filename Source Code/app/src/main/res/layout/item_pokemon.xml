@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="185dp"
+    android:layout_height="140dp"
+    android:layout_marginStart="@dimen/minimum_gap"
+    android:layout_marginBottom="@dimen/minimum_gap"
+    android:backgroundTint="#48D0B0"
+    app:cardCornerRadius="@dimen/default_gap">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="2dp"
+            android:layout_margin="@dimen/minimum_gap">
+
+            <TextView
+                android:id="@+id/pokemon_item_pokemon_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/default_text_size"
+                android:textColor="#43C7A7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="#001" />
+
+            <TextView
+                android:id="@+id/pokemon_item_pokemon_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/medium_text_size"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pokemon_item_pokemon_number"
+                tools:text="Bulbasaur" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/pokemon_item_types_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:chipSpacing="-10dp"
+                app:layout_constraintEnd_toStartOf="@+id/pokemon_item_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pokemon_item_pokemon_name">
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#33FFFFFF"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    tools:text="Grass" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#33FFFFFF"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/white"
+                    tools:text="Poison" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <ImageView
+                android:id="@+id/pokemon_item_img"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/description_pokemon_item_img"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pokemon_item_pokemon_name"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/pokemon_item_pokeball_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_pokeball"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginEnd="-10dp"
+            android:contentDescription="@string/description_pokeball_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
