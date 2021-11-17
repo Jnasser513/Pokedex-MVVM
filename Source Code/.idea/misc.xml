@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/drawable/ic_pokeball.xml" value="0.2611111111111111" />
         <entry key="app/src/main/res/drawable/pokemon_card_style.xml" value="0.2611111111111111" />
         <entry key="app/src/main/res/font/a.xml" value="0.2611111111111111" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.26197916666666665" />
+        <entry key="app/src/main/res/layout/fragment_favorites_pokemon.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/layout/fragment_home_pokedex.xml" value="0.26197916666666665" />
         <entry key="app/src/main/res/layout/item_pokemon.xml" value="0.26197916666666665" />
       </map>
